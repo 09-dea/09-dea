@@ -1,6 +1,15 @@
+/*=============== toggle ico navbar ==========*/
+let menuIcon = document.querySelector('#menu-icon');
+let navbar = document.querySelector('#navbar');
+
 /*=============== Scroll section avtive link ==========*/
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
+
+menuIcon.onclick = () => {
+    menuIcon.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
+};
 
 window.onscroll = () => {
     sections.forEach(sec => {
@@ -20,5 +29,33 @@ window.onscroll = () => {
     /*=============== Sticky navbar ==========*/
     let header = document.querySelector('header');
 
-    header.classList.tonggle('sticky', window.scrollY > 100);
+    header.classList.toggle('sticky', window.scrollY > 100);
+
+    /*=============== remove toggle icon and navbar when click navbar link (scroll) ==========*/
+    menuIcon.classList.remove('bx-x');
+    navbar.classList.remove('active');
 };
+
+/*=============== scrollreleval ==========*/
+ScrollReveal({
+   // reset: true,//
+    distance: '80px',
+    duration: 2000,
+    delay: 200
+});
+
+ScrollReveal().reveal('.home-content, .heading', { origin: 'top'});
+ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form', { origin: 'bottom'});
+ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left'});
+ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right'});
+
+/*=============== typedjs ==========*/
+const typed = new Typed('.multiple-text', {
+    strings: ['Fontend Developer', 'Youtuber', 'Blogger'],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true
+});
+
+
