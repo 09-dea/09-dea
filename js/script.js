@@ -1,15 +1,16 @@
 /*=============== toggle ico navbar ==========*/
 let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('#navbar');
+let navbar = document.querySelector('.navbar');
 
-/*=============== Scroll section avtive link ==========*/
-let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
 
 menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 };
+
+/*=============== Scroll section avtive link ==========*/
+let sections = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('header nav a');
 
 window.onscroll = () => {
     sections.forEach(sec => {
