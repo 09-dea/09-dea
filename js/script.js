@@ -52,7 +52,7 @@ ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right'});
 
 /*=============== typedjs ==========*/
 const typed = new Typed('.multiple-text', {
-    strings: ['Pelajar Smkn 1 Majalengka'],
+    strings: ['fontend developer'],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
