@@ -59,4 +59,7 @@ const typed = new Typed('.multiple-text', {
     loop: true
 });
 
+//copyright
+var currentYear = new Date().getFullYear();
+document.getElementById("currentYear").innerHTML = currentYear;
 
